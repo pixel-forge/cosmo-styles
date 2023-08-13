@@ -1,0 +1,27 @@
+{
+  "name": "@pixel-forge/cosmo-styles",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.scss",
+  "scripts": {
+    "sass": "npx stylelint src/**/*.scss",
+    "clean": "bash scripts/clean-dist.sh",
+    "transfer-files": "bash scripts/file-transfer.sh",
+    "build": "npm run clean && npm run sass && npm run transfer-files",
+    "publish": "npm run build && npm publish --access public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pixel-forge/cosmo-styles.git"
+  },
+  "author": "Cipher_IL",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/pixel-forge/cosmo-styles/issues"
+  },
+  "homepage": "https://github.com/pixel-forge/cosmo-styles#readme",
+  "devDependencies": {
+    "stylelint": "^15.10.2",
+    "stylelint-config-standard-scss": "^10.0.0"
+  }
+}
