@@ -1,0 +1,34 @@
+@use 'sass:math';
+@use 'sass:list';
+
+///Return a list of colors increasingly lighter based on given base color
+///@param {color} $baseColor
+/// The base color to calculate the list of colors
+///@param {number} $steps
+/// The amount of colors to generate, jump in brightness is calculated from 0 to 100% based on this number
+///@return {list}
+@function light-palette-builder($baseColor, $steps) {
+  $colorsList: ();
+  @for $i from 0 to $steps {
+    $percentage: math.percentage(math.div($i, $steps));
+    $newColor: lighten($baseColor, $percentage);
+    $colorsList: list.append($colorsList, #{$newColor});
+  }
+  @return $colorsList
+}
+
+///Return a list of colors increasingly darker based on given base color
+///@param {color} $baseColor
+/// The base color to calculate the list of colors
+///@param {number} $steps
+/// The amount of colors to generate, jump in darkness is calculated from 0 to 100% based on this number
+///@return {list}
+@function dark-palette-builder($baseColor, $steps) {
+  $colorsList: ();
+  @for $i from 0 to $steps {
+    $percentage: math.percentage(math.div($i, $steps));
+    $newColor: darken($baseColor, $percentage);
+    $colorsList: list.append($colorsList, #{$newColor});
+  }
+  @return $colorsList
+}

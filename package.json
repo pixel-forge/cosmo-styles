@@ -1,6 +1,6 @@
 {
   "name": "@pixel-forge/cosmo-styles",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "",
   "main": "dist/index.scss",
   "scripts": {
@@ -8,7 +8,7 @@
     "clean": "bash scripts/clean-dist.sh",
     "transfer-files": "bash scripts/file-transfer.sh",
     "build": "npm run clean && npm run sass && npm run transfer-files",
-    "publish": "npm run build && npm publish --access public"
+    "deploy": "npm run build && npm publish --access public"
   },
   "repository": {
     "type": "git",
@@ -23,5 +23,8 @@
   "devDependencies": {
     "stylelint": "^15.10.2",
     "stylelint-config-standard-scss": "^10.0.0"
+  },
+  "dependencies": {
+    "sass": "^1.65.1"
   }
 }
