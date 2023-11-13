@@ -1,7 +1,4 @@
-# cosmo-components [![npm version](https://badge.fury.io/js/@pixel-forge%2Fcosmo-components.svg)](https://badge.fury.io/js/@pixel-forge%2Fcosmo-components)
-Cosmo Components is a library that provides better React components,
-including inputs, buttons, and a high level version of React.Component class that has an 
-improved lifecycle that gets rid of redundant state deriving and re-rendering.
+# cosmo-styles [![npm version](https://badge.fury.io/js/@pixel-forge%2Fcosmo-styles.svg)](https://badge.fury.io/js/@pixel-forge%2Fcosmo-styles)
+Cosmo Styles is a library that provides various boilerplate SASS mixins and functions that in the long run lessens the work load for any developer.
 
-All cosmo components extend the Cosmo_Logger class from the [Cosmo Utils Library](https://www.npmjs.com/package/@pixel-forge/cosmo-utils) that provides
-better logging in the console, with stylizing based on the log level system, and grouping for clear log hierarchy.
+This library's icon related mixins are designed to go along well with the [Cosmo Icons Library](https://www.npmjs.com/package/@pixel-forge/cosmo-icons) icon structure.  
