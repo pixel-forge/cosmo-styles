@@ -1,0 +1,12 @@
+@mixin mouse-interactive-background($bg, $bgh: $bg, $bga: $bgh) {
+  background: $bg;
+  cursor: pointer;
+
+  &:hover {
+    background: $bgh;
+  }
+
+  &:active {
+    background: $bga;
+  }
+}

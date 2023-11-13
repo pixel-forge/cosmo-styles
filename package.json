@@ -1,6 +1,6 @@
 {
   "name": "@pixel-forge/cosmo-styles",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "dist/index.scss",
   "scripts": {
