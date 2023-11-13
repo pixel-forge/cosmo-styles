@@ -1,0 +1,13 @@
+@use '../shared' as shared;
+
+@mixin set-svg-prop($prop,$value) {
+  [data-ci-#{$prop}="true"]:not(g):not(svg) {
+    #{$prop}: $value;
+  }
+}
+
+@mixin color-svg($color) {
+  @each $rule in shared.$svg-prop-rules {
+    @include set-svg-prop($rule, $color);
+  }
+}

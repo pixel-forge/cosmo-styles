@@ -1,3 +1,6 @@
+@use '../shared' as shared;
+@use '../svg/color-svg' as svg;
+
 @mixin mouse-interactive-background($bg, $bgh: $bg, $bga: $bgh) {
   background: $bg;
   cursor: pointer;
@@ -8,5 +11,19 @@
 
   &:active {
     background: $bga;
+  }
+}
+
+@mixin mouser-interactive-icon($color, $color-hover, $color-active) {
+  @each $rule in shared.$svg-prop-rules {
+    @include svg.set-svg-prop($rule, $color);
+
+    &:hover {
+      @include svg.set-svg-prop($rule, $color-hover);
+    }
+
+    &:active {
+      @include svg.set-svg-prop($rule, $color-active);
+    }
   }
 }
